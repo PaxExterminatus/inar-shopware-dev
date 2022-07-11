@@ -18,8 +18,16 @@
 
 `docker-compose up -d`
 
-## Build
+## Build plugin
+
+- docker default path
 
 `cd /var/www/html`
 
+- build administration front-end
+
 `./bin/build-administration.sh`
+
+- build a shop front-end
+
+`./bin/build-storefront.sh`
