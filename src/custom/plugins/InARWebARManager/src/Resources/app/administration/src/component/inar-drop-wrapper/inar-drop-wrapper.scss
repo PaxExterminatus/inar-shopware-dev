@@ -1,0 +1,28 @@
+.inar-drop-wrapper {
+  flex-direction: row;
+  align-items: center;
+  border: 2px dashed #d1d9e0;
+  border-radius: 4px;
+  background-color: #f0f2f5;
+  position: relative;
+
+  .upload-spinner {
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    margin-left: -25px;
+    top: 0;
+    transform: translateY(15%);
+    width: 50px;
+    height: 50px;
+  }
+
+  &.dragover {
+    border-color: #189eff;
+    background-color: #e3f3ff;
+    color: #189eff;
+  }
+  &.loading {
+    opacity: .5;
+  }
+}

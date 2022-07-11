@@ -1,0 +1,50 @@
+.inar-webar-manager {
+  .filename-el {
+    display: flex;
+    .filename-label {
+      margin-right: 5px;
+    }
+  }
+
+  .inar-loading {
+    position: relative;
+    .inar-spinner {
+      position: absolute;
+    }
+    &.loading {
+
+    }
+  }
+
+  .inar-label {
+    line-height: 16px;
+    font-size: 14px;
+    color: #52667a;
+    font-weight: 400;
+  }
+
+  .sw-file-input__dropzone {
+    border: none;
+  }
+  .sw-file-input__header {
+    display: none;
+  }
+
+  .sw-file-input__dropzone {
+    min-height: 10px;
+    padding: 5px;
+  }
+  .sw-file-input__upload-caption {
+    font-size: 16px;
+    margin: 0 auto;
+  }
+}
+
+.inar-modal-message {
+  .sw-modal__header {
+    justify-content: flex-start;
+  }
+  .inar-badge-error-icon {
+    margin-right: 5px;
+  }
+}

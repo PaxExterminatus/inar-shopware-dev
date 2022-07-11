@@ -1,0 +1,42 @@
+{
+    "name": "inar/web-ar-manager",
+    "description": "Allows user to try out your products in Augumented Reality.",
+    "version": "1.0.1",
+    "license": "MIT",
+    "authors": [{
+        "name": "InAR"
+    }],
+    "require": {
+        "shopware/core": "*",
+        "shopware/administration": "*",
+        "shopware/storefront": "*"
+    },
+    "type": "shopware-platform-plugin",
+    "autoload": {
+        "psr-4": {
+            "InAR\\WebARManager\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "InAR\\WebARManager\\WebARManager",
+        "plugin-icon": "src/Resources/config/plugin.png",
+
+        "copyright": "(c) by InAR",
+        "label": {
+            "en-GB": "WebAR",
+            "de-DE": "WebAR"
+        },
+        "description": {
+            "en-GB": "Allows user to try out your products in Augumented Reality.",
+            "de-DE": "Ermöglicht dem Benutzer, Ihre Produkte in Augmented Reality auszuprobieren."
+        },
+        "manufacturerLink": {
+            "de-DE": "https://theinar.com/",
+            "en-GB": "https://theinar.com/"
+        },
+        "supportLink": {
+            "de-DE": "https://theinar.com/",
+            "en-GB": "https://theinar.com/"
+        }
+    }
+}

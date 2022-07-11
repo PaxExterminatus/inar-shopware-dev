@@ -1,0 +1,17 @@
+{% block sw_product_list_grid_columns %}
+	{% parent %}
+	{% block sw_product_list_grid_columns_webarModelId %}
+		<template #column-webarModelId="{ item }">
+			{% block sw_product_list_grid_columns_webarModelId_content %}
+				<template>
+					<template v-if="item.customFields && item.customFields.inar_webar_model_usdz && item.customFields.inar_webar_model_glb && !item.customFields.inar_webar_webar_disable">
+						<sw-icon name="small-default-checkmark-line-medium" small class="is--active"/>
+					</template>
+					<template v-else>
+						<sw-icon name="small-default-x-line-medium" class="is--inactive" small/>
+					</template>
+				</template>
+			{% endblock %}
+		</template>
+	{% endblock %}
+{% endblock %}

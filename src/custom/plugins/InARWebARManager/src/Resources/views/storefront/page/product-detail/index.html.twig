@@ -1,0 +1,25 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/index.html.twig' %}
+
+{% block base_head %}
+   {{parent()}}
+
+<script>
+    window.AR_HOST='qa-app.theinar.com';
+</script>
+
+<script src="https://qa-app.theinar.com/webarapp/lib.js"></script>
+    {# version compatibility 6.3 #}
+    {% if shopware.config.WebARManager.config.inarAddCss %}
+        {% set arBtnCss = shopware.config.WebARManager.config.inarAddCss %}
+    {% endif %}
+
+    {% if config('WebARManager.config.inarAddCss') %}
+        {% set arBtnCss = config('WebARManager.config.inarAddCss') %}
+    {% endif %}
+
+    {% if arBtnCss %}
+     <style type="text/css">
+        {{ arBtnCss|raw }}
+     </style>
+    {% endif %}
+{% endblock %}

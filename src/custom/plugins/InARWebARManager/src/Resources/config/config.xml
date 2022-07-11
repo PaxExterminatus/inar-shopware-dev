@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>WebAR Configuration</title>
+        <title lang="de-DE">WebAR Konfiguration</title>
+
+        <input-field>
+            <name>authToken</name>
+            <label>Access Token</label>
+            <label lang="de-DE">Auth-Token</label>
+            <placeholder>Enter Auth-Token</placeholder>
+            <placeholder lang="de-DE">Geben Sie Auth-Token ein</placeholder>
+        </input-field>
+
+
+        <input-field type="textarea">
+            <name>inarAddCss</name>
+            <label>InAR button CSS</label>
+            <label lang="de-DE">InAR-Schaltfläche CSS</label>
+<defaultValue>a.ar_button__link {
+background-color: #008490;
+color: #fff !important;
+border-radius: 3px;
+font-size: 1rem;
+}</defaultValue>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>snippetField</name>
+            <label>Rename WebAR button</label>
+            <snippet>inar-webar-btn</snippet>
+        </component>
+    </card>
+</config>

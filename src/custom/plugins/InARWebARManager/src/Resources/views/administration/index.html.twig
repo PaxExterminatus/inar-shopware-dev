@@ -1,0 +1,10 @@
+{% sw_extends 'administration/index.html.twig' %}
+
+{% block administration_scripts %}
+    {{ parent() }}
+
+    <script
+        type="text/javascript"
+        src="{{ asset('bundles/inarwebarmanager/administration/js/web-a-r-manager.js') }}"
+    ></script>
+{% endblock %}

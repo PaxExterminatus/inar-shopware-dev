@@ -1,0 +1,55 @@
+<div class="inar-webar-manager">
+
+  <template v-if="productIsNew">
+    <inar-message type="error" label="This product is new">
+      {{ 'Save product when editing' }}
+    </inar-message>
+  </template>
+
+  <template v-if="!productIsNew">
+    <inar-message :type="storeGlb ? 'success' : 'error'" label="Current GLB file">
+      {{ storeGlb ? storeGlb : 'To activate WebAR upload GLB file' }}
+    </inar-message>
+
+    <label class="inar-label">
+      Upload GLB file
+      <inar-drop-wrapper @drop="onDropFilesGlb" :loading="state.loading.glb">
+        <sw-file-input
+            :filename="storeGlb"
+            @onFileInputChange="onFileInputChangeGlb"
+        ></sw-file-input>
+      </inar-drop-wrapper>
+    </label>
+
+    <inar-message :type="storeUsdz ? 'success' : 'error'" label="Current USDZ file">
+      {{ storeUsdz ? storeUsdz : 'To activate WebAR upload USDZ file' }}
+    </inar-message>
+
+    <label class="inar-label">
+      Upload USDZ file
+      <inar-drop-wrapper @drop="onDropFilesUsdz" :loading="state.loading.usdz">
+        <sw-file-input
+            :filename="storeUsdz"
+            @onFileInputChange="onFileInputChangeUsdz"
+        ></sw-file-input>
+      </inar-drop-wrapper>
+    </label>
+
+    <sw-switch-field label="Disable WebAR" v-model="storeDisabled"/>
+  </template>
+
+  <sw-modal class="inar-modal-message" v-if="modal.on">
+    <template slot="modal-header" style="justify-content: flex-start">
+      <sw-icon class="inar-badge-error-icon" name="default-badge-error" color="#ff6961"/>
+      {{ modal.title }}
+    </template>
+
+    {{ modal.text }}
+
+    <template slot="modal-footer">
+      <sw-button @click="modalOff">
+        Close
+      </sw-button>
+    </template>
+  </sw-modal>
+</div>
